@@ -1,5 +1,5 @@
 /**
- * encar-api — Encar API client for JavaScript and TypeScript: South Korean used-car listings from Encar as JSON.
+ * encar-api-client — Encar API client for JavaScript and TypeScript: South Korean used-car listings from Encar as JSON.
  *
  * A thin layer over the apiauto.space client (`apiauto`) with the market preset to `kr`.
  * From the apiauto.space team. Not affiliated with Encar or SK Encar.
@@ -74,11 +74,11 @@ export type ChangesFilters = Omit<ChangesParams, "market">;
  */
 export function carId(listing: string | number): string {
   const text = String(listing).trim();
-  if (text === "") throw new TypeError("encar-api: listing must not be empty");
+  if (text === "") throw new TypeError("encar-api-client: listing must not be empty");
   const sep = text.indexOf(":");
   if (sep === -1) return `${SOURCE}:${text}`;
   if (text.slice(0, sep) !== SOURCE || sep === text.length - 1) {
-    throw new TypeError(`encar-api: not a Encar id: ${JSON.stringify(text)}`);
+    throw new TypeError(`encar-api-client: not a Encar id: ${JSON.stringify(text)}`);
   }
   return text;
 }
@@ -95,7 +95,7 @@ export function raw(car: Car): EncarRaw {
  *
  * @example
  * ```ts
- * import { EncarApi } from "encar-api";
+ * import { EncarApi } from "encar-api-client";
  *
  * const api = new EncarApi(); // reads APIAUTO_KEY
  * const page = await api.cars({ brand: "Hyundai", year_min: 2020, limit: 20 });
@@ -159,7 +159,7 @@ export class EncarApi {
   /** The kr market: plan access, data age and the number of active cars. Free. */
   async status(): Promise<MarketStatus> {
     const market = (await this.core.markets()).find((item) => item.market === MARKET);
-    if (market === undefined) throw new Error(`encar-api: the API did not list the ${MARKET} market`);
+    if (market === undefined) throw new Error(`encar-api-client: the API did not list the ${MARKET} market`);
     return market;
   }
 

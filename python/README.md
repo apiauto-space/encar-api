@@ -1,10 +1,10 @@
-# encar-api — Encar API client for Python
+# encar-api-client — Encar API client for Python
 
-[![PyPI version](https://img.shields.io/pypi/v/encar-api.svg)](https://pypi.org/project/encar-api/)
-[![Python versions](https://img.shields.io/pypi/pyversions/encar-api.svg)](https://pypi.org/project/encar-api/)
+[![PyPI version](https://img.shields.io/pypi/v/encar-api-client.svg)](https://pypi.org/project/encar-api-client/)
+[![Python versions](https://img.shields.io/pypi/pyversions/encar-api-client.svg)](https://pypi.org/project/encar-api-client/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/apiauto-space/encar-api/blob/main/LICENSE)
 
-`encar-api` gives you South Korean used-car listings from Encar as clean JSON through the [apiauto.space](https://apiauto.space/en/encar-api/)
+`encar-api-client` gives you South Korean used-car listings from Encar as clean JSON through the [apiauto.space](https://apiauto.space/en/encar-api/)
 REST API, without writing or maintaining a scraper. Search by make, model, year, price and mileage, page
 through the whole catalog, fetch one listing by its number and follow a feed of new cars, cars taken off sale
 and price changes.
@@ -21,7 +21,7 @@ the project is not affiliated with Encar or SK Encar.
 ## Install
 
 ```bash
-pip install encar-api
+pip install encar-api-client
 ```
 
 The module you import is `encar_api`.
@@ -128,11 +128,9 @@ print(extra.get("source_values"))
 
 - [Encar API on apiauto.space](https://apiauto.space/en/encar-api/) and the [API documentation](https://apiauto.space/en/docs/)
 - [`apiauto-space`](https://pypi.org/project/apiauto-space/): the general client for all markets
-- Clients for the other sources: [`encar-api`](https://pypi.org/project/encar-api/),
-  [`che168-api`](https://pypi.org/project/che168-api/), [`copart-api`](https://pypi.org/project/copart-api/),
-  [`iaai-api`](https://pypi.org/project/iaai-api/)
+- Clients for the other sources: [`che168-api`](https://pypi.org/project/che168-api/), [`copart-api`](https://pypi.org/project/copart-api/), [`iaai-api`](https://pypi.org/project/iaai-api/)
 - [Examples in curl, Python, JavaScript and PHP](https://github.com/apiauto-space/encar-api-examples)
-- The JavaScript version of this client: [`encar-api` on npm](https://www.npmjs.com/package/encar-api)
+- The JavaScript version of this client: [`encar-api-client` on npm](https://www.npmjs.com/package/encar-api-client)
 
 ## License
 

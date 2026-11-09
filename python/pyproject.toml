@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "encar-api"
+name = "encar-api-client"
 dynamic = ["version"]
 description = "Encar API client for Python: South Korean used-car listings from Encar as JSON, from the apiauto.space team"
 readme = "README.md"

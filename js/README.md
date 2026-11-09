@@ -1,9 +1,9 @@
-# encar-api — Encar API client for JavaScript and TypeScript
+# encar-api-client — Encar API client for JavaScript and TypeScript
 
-[![npm version](https://img.shields.io/npm/v/encar-api.svg)](https://www.npmjs.com/package/encar-api)
+[![npm version](https://img.shields.io/npm/v/encar-api-client.svg)](https://www.npmjs.com/package/encar-api-client)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/apiauto-space/encar-api/blob/main/LICENSE)
 
-`encar-api` gives you South Korean used-car listings from Encar as clean JSON through the [apiauto.space](https://apiauto.space/en/encar-api/)
+`encar-api-client` gives you South Korean used-car listings from Encar as clean JSON through the [apiauto.space](https://apiauto.space/en/encar-api/)
 REST API, without writing or maintaining a scraper. Search by make, model, year, price and mileage, page
 through the whole catalog, fetch one listing by its number and follow a feed of new cars, cars taken off sale
 and price changes.
@@ -20,7 +20,7 @@ is not affiliated with Encar or SK Encar.
 ## Install
 
 ```bash
-npm install encar-api
+npm install encar-api-client
 ```
 
 ## Get a key
@@ -35,7 +35,7 @@ server: the API does not accept browser requests, and a key in page code is visi
 ## Quick start
 
 ```ts
-import { EncarApi } from "encar-api";
+import { EncarApi } from "encar-api-client";
 
 const api = new EncarApi(); // reads APIAUTO_KEY
 
@@ -110,7 +110,7 @@ here: `QuotaExceededError`, `RateLimitError`, `NotFoundError`, `AuthenticationEr
 ## Encar-only fields
 
 ```ts
-import { raw } from "encar-api";
+import { raw } from "encar-api-client";
 
 const extra = raw(car); // typed as EncarRaw
 console.log(extra.source_values);
@@ -120,11 +120,9 @@ console.log(extra.source_values);
 
 - [Encar API on apiauto.space](https://apiauto.space/en/encar-api/) and the [API documentation](https://apiauto.space/en/docs/)
 - [`apiauto`](https://www.npmjs.com/package/apiauto): the general client for all markets
-- Clients for the other sources: [`encar-api`](https://www.npmjs.com/package/encar-api),
-  [`che168-api`](https://www.npmjs.com/package/che168-api), [`copart-api`](https://www.npmjs.com/package/copart-api),
-  [`iaai-api`](https://www.npmjs.com/package/iaai-api)
+- Clients for the other sources: [`che168-api`](https://www.npmjs.com/package/che168-api), [`copart-api`](https://www.npmjs.com/package/copart-api), [`iaai-api`](https://www.npmjs.com/package/iaai-api)
 - [Examples in curl, Python, JavaScript and PHP](https://github.com/apiauto-space/encar-api-examples)
-- The Python version of this client: [`encar-api` on PyPI](https://pypi.org/project/encar-api/)
+- The Python version of this client: [`encar-api-client` on PyPI](https://pypi.org/project/encar-api-client/)
 
 ## License
 

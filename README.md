@@ -6,8 +6,8 @@ No scraper to write or maintain.
 
 | Language | Package | Install | Folder |
 |---|---|---|---|
-| Python 3.10+ | [`encar-api` on PyPI](https://pypi.org/project/encar-api/) | `pip install encar-api` | [python/](python/) |
-| JavaScript / TypeScript | [`encar-api` on npm](https://www.npmjs.com/package/encar-api) | `npm install encar-api` | [js/](js/) |
+| Python 3.10+ | [`encar-api-client` on PyPI](https://pypi.org/project/encar-api-client/) | `pip install encar-api-client` | [python/](python/) |
+| JavaScript / TypeScript | [`encar-api-client` on npm](https://www.npmjs.com/package/encar-api-client) | `npm install encar-api-client` | [js/](js/) |
 
 ```python
 import encar_api
@@ -18,7 +18,7 @@ with encar_api.Client() as client:  # reads APIAUTO_KEY
 ```
 
 ```ts
-import { EncarApi } from "encar-api";
+import { EncarApi } from "encar-api-client";
 
 const page = await new EncarApi().cars({ brand: "Hyundai", year_min: 2020, limit: 20 });
 ```

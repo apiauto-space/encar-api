@@ -1,5 +1,5 @@
 {
-  "name": "encar-api",
+  "name": "encar-api-client",
   "version": "0.1.0",
   "description": "Encar API client for JavaScript and TypeScript: South Korean used-car listings from Encar as JSON, from the apiauto.space team",
   "keywords": ["encar", "encar-api", "encar.com", "korean-cars", "korea", "used-cars", "car-listings", "vehicle-data", "api-client", "typescript"],
