@@ -13,14 +13,16 @@ No scraper to write or maintain.
 import encar_api
 
 with encar_api.Client() as client:  # reads APIAUTO_KEY
-    for car in client.cars(brand="Hyundai", year_min=2020, limit=20)["items"]:
+    for car in client.iter_cars(max_items=20, brand="Hyundai", year_min=2020):
         print(car["id"], car["title"], car["price"]["amount"])
 ```
 
 ```ts
 import { EncarApi } from "encar-api-client";
 
-const page = await new EncarApi().cars({ brand: "Hyundai", year_min: 2020, limit: 20 });
+for await (const car of new EncarApi().iterCars({ brand: "Hyundai", year_min: 2020, maxItems: 20 })) {
+  console.log(car.id, car.title, car.price.amount);
+}
 ```
 
 Both are thin layers over the general apiauto.space clients ([Python](https://github.com/apiauto-space/apiauto-python),

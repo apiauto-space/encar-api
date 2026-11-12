@@ -39,12 +39,14 @@ import { EncarApi } from "encar-api-client";
 
 const api = new EncarApi(); // reads APIAUTO_KEY
 
-const page = await api.cars({ brand: "Hyundai", year_min: 2020, limit: 20 });
-for (const car of page.items) {
+const cars = [];
+for await (const car of api.iterCars({ brand: "Hyundai", year_min: 2020, maxItems: 20 })) {
   console.log(car.id, car.title, car.price.amount, car.price.currency);
+  cars.push(car);
 }
 
-const one = await api.car("42793038"); // a listing number or "encar:42793038"
+// One car by its listing number, such as "42793038", or its id, such as "encar:42793038"
+const one = await api.car(cars[0].source_id);
 console.log(one.listing_url, one.photos[0]);
 ```
 

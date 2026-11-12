@@ -46,7 +46,7 @@ def test_constants() -> None:
     assert encar_api.MARKET == "kr"
     assert encar_api.SOURCE == "encar"
     assert encar_api.SHARED_MARKET is False
-    assert encar_api.__version__ == "0.1.0"
+    assert encar_api.__version__ == "0.1.1"
 
 
 def test_cars_presets_the_market() -> None:

@@ -46,11 +46,12 @@ Keep the key on your server: the API does not accept browser requests.
 import encar_api
 
 with encar_api.Client() as client:  # reads APIAUTO_KEY
-    page = client.cars(brand="Hyundai", year_min=2020, limit=20)
-    for car in page["items"]:
+    cars = list(client.iter_cars(max_items=20, brand="Hyundai", year_min=2020))
+    for car in cars:
         print(car["id"], car["title"], car["price"]["amount"], car["price"]["currency"])
 
-    one = client.car("42793038")  # a listing number or "encar:42793038"
+    # One car by its listing number, such as "42793038", or its id, such as "encar:42793038"
+    one = client.car(cars[0]["source_id"])
     print(one["listing_url"], one["photos"][:1])
 ```
 

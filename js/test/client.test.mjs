@@ -33,7 +33,7 @@ describe("constants", () => {
     assert.equal(MARKET, "kr");
     assert.equal(SOURCE, "encar");
     assert.equal(SHARED_MARKET, false);
-    assert.equal(VERSION, "0.1.0");
+    assert.equal(VERSION, "0.1.1");
   });
 });
 
